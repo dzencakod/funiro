@@ -24,35 +24,33 @@
 	font-weight: 400;
 }
 
-body{
+body {
 	margin: 0;
 	font-family: "Gilroy";
 }
-a{
+a {
 	color: #000;
 	text-decoration: none;
 }
-li,ul{
+li,
+ul {
 	list-style-type: none;
 }
-button{
+button {
 	outline: none;
 	border: none;
 	background: none;
 	padding: 0;
 	cursor: pointer;
 }
-input{
+input {
 	outline: none;
 	border: none;
-
 }
-.container{
+.container {
 	max-width: 1240px;
 	padding: 0 10px;
 	margin: 0 auto;
 }
 @import "_header";
-
-
-@import "_media"
+@import "_slider";

@@ -2,9 +2,6 @@ document.querySelector(".burger-span").addEventListener("click", () => {
 	document.querySelector("body").classList.toggle("active");
 	document.querySelector(".header").classList.toggle("active");
 })
-// for (const elem of document.querySelectorAll(".burger__plus")) {
-// 	
-// }
 for (let index = 0; index < document.querySelectorAll(".burger__plus").length; index++) {
 	const elem = document.querySelectorAll(".burger__plus")[index];
 	elem.addEventListener("click", () => {
@@ -13,3 +10,4 @@ for (let index = 0; index < document.querySelectorAll(".burger__plus").length; i
 		elem.classList.toggle("active");
 	})
 }
+
