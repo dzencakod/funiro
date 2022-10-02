@@ -11,3 +11,25 @@ for (let index = 0; index < document.querySelectorAll(".burger__plus").length; i
 	})
 }
 
+let swiper = new Swiper('.swiper', {
+	slidesPerView: 1,
+	spaceBetween: 6,
+	autoHeight: true,
+	loop: true,
+	pagination: {
+		el: '.main-pagination',
+		type: 'bullets',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+});
+
+document.querySelector(".main__banner-arrow").addEventListener("click", () => {
+	document.querySelector(".main__banner").classList.toggle("activate");
+	document.querySelector(".main__banner-wrapper").classList.toggle("activate");
+	document.querySelector(".main__banner-arrow").classList.toggle("activate");
+})
+

@@ -99,10 +99,13 @@ body.active {
 		margin-left: 32px;
 	}
 }
+
 .menu__list > li:hover .menu__sub-li {
 	opacity: 1;
 	visibility: visible;
 	pointer-events: all;
+	z-index: 50;
+	box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.364);
 }
 .menu__list > li:hover .menu__li-with:after {
 	content: url("../img/Arrow-up.png");
