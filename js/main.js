@@ -33,3 +33,18 @@ document.querySelector(".main__banner-arrow").addEventListener("click", () => {
 	document.querySelector(".main__banner-arrow").classList.toggle("activate");
 })
 
+let cards = document.querySelectorAll(".card")
+for (let index = 0; index < cards.length; index++) {
+	const element = cards[index];
+	// element.addEventListener("click", () => {
+	// 	element.classList.add("active")
+	// })
+	// document.addEventListener('click', (e) => {
+	// 	const withinBoundaries = e.composedPath().includes(element);
+
+	// 	if (!withinBoundaries) {
+	// 		element.classList.remove("active");
+	// 	}
+	// })
+}
+

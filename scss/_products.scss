@@ -18,7 +18,7 @@
 }
 .card {
 	max-width: 100%;
-	padding: 16px 16px;
+	margin: 16px 16px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -104,5 +104,90 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+	&__substrate {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #3a3a3ac4;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		transition: all 0.3s;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+
+		&-button {
+			width: 200px;
+			font-weight: 600;
+			font-size: 16px;
+			color: #e89f71;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 12px 0;
+			background: #fff;
+		}
+		&-icon {
+			display: flex;
+			align-items: center;
+			width: 190px;
+			margin-top: 24px;
+			justify-content: space-between;
+		}
+		&-share {
+			display: flex;
+			align-items: center;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			color: #ffffff;
+			img {
+				margin-right: 8px;
+			}
+		}
+		&-like {
+			display: flex;
+			align-items: center;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			color: #ffffff;
+			img {
+				margin-right: 8px;
+			}
+		}
+	}
+}
+.card:hover .card__substrate {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+@media screen and (max-width: 1250px) {
+	.products__list {
+		grid-template-columns: 32% 32% 32%;
+	}
+}
+@media screen and (max-width: 950px) {
+	.products__list {
+		grid-template-columns: 50% 50%;
+	}
+	.card {
+		margin: 8px 8px;
+	}
+}
+@media screen and (max-width: 580px) {
+	.products__list {
+		grid-template-columns: 100%;
+	}
+	.card {
+		margin: 8px 0;
 	}
 }
