@@ -180,7 +180,7 @@
 			order: 1;
 		}
 		&__banner {
-			margin-top: 20px;
+			margin: 20px 0 20px 0;
 			width: 100%;
 			order: 2;
 			&-title {
@@ -197,7 +197,10 @@
 			}
 		}
 		&__banner-wrapper {
+			max-width: 100%;
+			margin: 0;
 			padding: 10px;
+			position: static;
 		}
 		&__banner-arrow {
 			display: none;
