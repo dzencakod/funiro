@@ -382,7 +382,7 @@ body.active {
   height: 100%;
 }
 
-.swiper-slide {
+.main-swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -510,16 +510,16 @@ body.active {
   position: relative;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.main-swiper-button-next,
+.main-swiper-button-prev {
   position: static;
   width: 48px;
   height: 48px;
   background: #e89f71;
   border-radius: 50%;
 }
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.main-swiper-button-next::after,
+.main-swiper-button-prev::after {
   color: #fff;
   font-size: 16px;
 }
@@ -530,7 +530,7 @@ body.active {
   justify-content: center;
 }
 
-.swiper-button-prev {
+.main-swiper-button-prev {
   margin: 0 8px 0 0;
 }
 
@@ -602,16 +602,16 @@ body.active {
     position: static;
     margin: 0;
   }
-  .main .swiper-button-prev,
-.main .swiper-button-next {
+  .main .main-swiper-button-prev,
+.main .main-swiper-button-next {
     width: 40px;
     height: 40px;
   }
-  .main .swiper-button-prev::after,
-.main .swiper-button-next::after {
+  .main .main-swiper-button-prev::after,
+.main .main-swiper-button-next::after {
     font-size: 16px;
   }
-  .main .swiper-button-prev {
+  .main .main-swiper-button-prev {
     margin: 0 15px 0 0;
   }
 }
@@ -806,6 +806,171 @@ body.active {
   }
   .card {
     margin: 8px 0;
+  }
+}
+.rooms {
+  background: #fcf8f3;
+}
+.rooms__container {
+  display: flex;
+}
+.rooms__main {
+  width: 30%;
+}
+.rooms__main-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  color: #3a3a3a;
+}
+.rooms__main-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #616161;
+  padding: 8px 0 24px 0;
+}
+.rooms__main-button {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background: #e89f71;
+  padding: 12px 40px;
+}
+.rooms__slider {
+  width: 60%;
+}
+.rooms .swiper-slide-active {
+  height: 582px;
+  min-width: 404px;
+  opacity: 1;
+}
+.rooms .swiper-slide-next {
+  height: 486px;
+  opacity: 1;
+}
+.rooms .swiper-slide-next .room__slide-block {
+  display: none;
+}
+
+.room__slider {
+  width: 100%;
+  height: 582px;
+}
+.room__slide {
+  opacity: 0;
+  position: relative;
+}
+.room__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.room__slide-block {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: baseline;
+}
+.room__slide-wrapper {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  padding: 32px;
+}
+.room__slide-nomer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #616161;
+}
+.room__slide-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 120%;
+  color: #3a3a3a;
+}
+.room__slide-arrow {
+  align-self: flex-end;
+  padding: 12px 12px 8px 12px;
+  background: #e89f71;
+}
+
+.room__slide-last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.room__slide-last img {
+  filter: blur(2px);
+}
+.room__slide-last .room__slide-button-last {
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  background: #e89f71;
+  padding: 12px 40px;
+  position: absolute;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.557);
+}
+
+.room-button-next,
+.room-button-prev {
+  background: #e89f71;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.557);
+}
+.room-button-next::after,
+.room-button-prev::after {
+  color: #fff;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1201px) {
+  .rooms {
+    padding: 44px 0;
+  }
+  .rooms__main {
+    margin-right: 80px;
+    min-width: 378px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .rooms__main {
+    width: 100%;
+    padding: 60px 0;
+  }
+  .rooms__container {
+    flex-direction: column;
+  }
+  .rooms__slider {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 876px) {
+  .rooms .swiper-slide-active {
+    min-width: 300px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .rooms .swiper-slide-active {
+    height: 500px;
+  }
+  .room__slider {
+    height: 500px;
+  }
+  .room__slide-last .room__slide-button-last {
+    margin: 100px 0 -100px 0;
   }
 }
 .feature {

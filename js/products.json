@@ -1,0 +1,42 @@
+[
+	{
+		"title": "Table MARSHAL",
+		"price": "4.500.000",
+		"priceLast": "7.300.000",
+		"discount": "-30%",
+		"discountOr": true,
+		"now": false,
+		"text": "Handmade furniture",
+		"img": "img/product/1.png"
+	},
+	{
+		"title": "Multifurious Table",
+		"price": "7.000.000",
+		"priceLast": "",
+		"discount": "",
+		"discountOr": false,
+		"now": true,
+		"text": "Comfortable desk and study",
+		"img": "img/product/2.jpg"
+	},
+	{
+		"title": "Beautiful Shelf",
+		"price": "3.230.000",
+		"priceLast": "3.800.000",
+		"discount": "-15%",
+		"discountOr": true,
+		"now": false,
+		"text": "Shelf with beautiful design",
+		"img": "img/product/3.jpg"
+	},
+	{
+		"title": "Armchair",
+		"price": "2.000.000",
+		"priceLast": "",
+		"discount": "",
+		"discountOr": false,
+		"now": false,
+		"text": "Stylish armchair for you",
+		"img": "img/product/4.jpg"
+	}
+]

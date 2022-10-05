@@ -11,40 +11,113 @@ for (let index = 0; index < document.querySelectorAll(".burger__plus").length; i
 	})
 }
 
-let swiper = new Swiper('.swiper', {
+let swiper = new Swiper('.main-swiper', {
 	slidesPerView: 1,
 	spaceBetween: 6,
 	autoHeight: true,
 	loop: true,
+	autoplay: true,
 	pagination: {
 		el: '.main-pagination',
 		type: 'bullets',
 		clickable: true,
 	},
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.main-swiper-button-next',
+		prevEl: '.main-swiper-button-prev',
 	},
 });
+if (innerWidth <= 876) {
+	let room = new Swiper('.room__slider', {
+		slidesPerView: 1,
+		spaceBetween: 6,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.room-button-next',
+			prevEl: '.room-button-prev',
+		},
+	});
+} else {
+	let room = new Swiper('.room__slider', {
+		slidesPerView: 2,
+		spaceBetween: 6,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.room-button-next',
+			prevEl: '.room-button-prev',
+		},
+	});
+}
 
 document.querySelector(".main__banner-arrow").addEventListener("click", () => {
 	document.querySelector(".main__banner").classList.toggle("activate");
 	document.querySelector(".main__banner-wrapper").classList.toggle("activate");
 	document.querySelector(".main__banner-arrow").classList.toggle("activate");
 })
-
-let cards = document.querySelectorAll(".card")
-for (let index = 0; index < cards.length; index++) {
-	const element = cards[index];
-	// element.addEventListener("click", () => {
-	// 	element.classList.add("active")
-	// })
-	// document.addEventListener('click', (e) => {
-	// 	const withinBoundaries = e.composedPath().includes(element);
-
-	// 	if (!withinBoundaries) {
-	// 		element.classList.remove("active");
-	// 	}
-	// })
+let dataProduct = [];
+let response = fetch("js/products.json")
+	.then(response => response.json())
+	.then(data => dataUpdate(data))
+function dataUpdate(data) {
+	for (let index = 0; index < data.length; index++) {
+		let htmlLIstProduct = document.querySelector(".products__list").innerHTML;
+		const element = data[index];
+		if (element.discountOr) {
+			document.querySelector(".products__list").innerHTML = htmlLIstProduct + `<div class="card">
+			<div div class="card__image"><img src="${element.img}" alt=""></div>
+		<div class="card__block">
+			<div class="card__title">${element.title}</div>
+			<div class="card__text">${element.text}</div>
+			<div class="card__price">
+				<p>Rp ${element.price}</p><span>${element.priceLast === '' ? '' : "Rp " + element.priceLast}</span>
+			</div>
+		</div>
+		<div class="card__status card__discount">${element.discount}</div>
+		<div class="card__substrate">
+			<button class="card__substrate-button">Add to cart</button>
+			<div class="card__substrate-icon">
+				<button class="card__substrate-share"><img src="img/share-icon.png" alt="">Share</button>
+				<button class="card__substrate-like"><img src="img/like-icon.png" alt="">Like</button>
+			</div>
+		</div>
+	</div>`;
+		} else if (element.now) {
+			document.querySelector(".products__list").innerHTML = htmlLIstProduct + `<div class="card">
+			<div div class="card__image"><img src="${element.img}" alt=""></div>
+		<div class="card__block">
+			<div class="card__title">${element.title}</div>
+			<div class="card__text">${element.text}</div>
+			<div class="card__price">
+				<p>Rp ${element.price}</p><span>${element.priceLast === '' ? '' : "Rp " + element.priceLast}</span>
+			</div>
+		</div>
+		<div class="card__status card__new">New</div>
+		<div class="card__substrate">
+			<button class="card__substrate-button">Add to cart</button>
+			<div class="card__substrate-icon">
+				<button class="card__substrate-share"><img src="img/share-icon.png" alt="">Share</button>
+				<button class="card__substrate-like"><img src="img/like-icon.png" alt="">Like</button>
+			</div>
+		</div>
+	</div>`;
+		} else {
+			document.querySelector(".products__list").innerHTML = htmlLIstProduct + `<div class="card">
+			<div div class="card__image"><img src="${element.img}" alt=""></div>
+		<div class="card__block">
+			<div class="card__title">${element.title}</div>
+			<div class="card__text">${element.text}</div>
+			<div class="card__price">
+				<p>${element.price}</p><span>${element.priceLast === '' ? '' : "Rp " + element.priceLast}</span>
+			</div>
+		</div>
+		<div class="card__substrate">
+			<button class="card__substrate-button">Add to cart</button>
+			<div class="card__substrate-icon">
+				<button class="card__substrate-share"><img src="img/share-icon.png" alt="">Share</button>
+				<button class="card__substrate-like"><img src="img/like-icon.png" alt="">Like</button>
+			</div>
+		</div>
+	</div>`;
+		}
+	}
 }
-

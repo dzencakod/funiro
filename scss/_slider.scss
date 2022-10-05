@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 100%;
 }
-.swiper {
+.main-swiper {
 	&-slide {
 		display: flex;
 		align-items: center;
@@ -130,8 +130,8 @@
 	height: 100%;
 	position: relative;
 }
-.swiper-button-prev,
-.swiper-button-next {
+.main-swiper-button-next,
+.main-swiper-button-prev {
 	position: static;
 	width: 48px;
 	height: 48px;
@@ -147,7 +147,7 @@
 	align-items: center;
 	justify-content: center;
 }
-.swiper-button-prev {
+.main-swiper-button-prev {
 	margin: 0 8px 0 0;
 }
 .main__banner-wrapper.activate {
@@ -217,15 +217,15 @@
 			position: static;
 			margin: 0;
 		}
-		.swiper-button-prev,
-		.swiper-button-next {
+		.main-swiper-button-prev,
+		.main-swiper-button-next {
 			width: 40px;
 			height: 40px;
 			&::after {
 				font-size: 16px;
 			}
 		}
-		.swiper-button-prev {
+		.main-swiper-button-prev {
 			margin: 0 15px 0 0;
 		}
 	}
