@@ -48,7 +48,55 @@ if (innerWidth <= 876) {
 		},
 	});
 }
-
+if (innerWidth >= 600 && innerWidth <= 1000) {
+	let tips = new Swiper('.tips__slider', {
+		slidesPerView: 2,
+		spaceBetween: 20,
+		autoHeight: true,
+		loop: true,
+		pagination: {
+			el: '.tips__pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.tips__button-next',
+			prevEl: '.tips__button-prev',
+		},
+	});
+} else if (innerWidth <= 600) {
+	let tips = new Swiper('.tips__slider', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoHeight: true,
+		loop: true,
+		pagination: {
+			el: '.tips__pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.tips__button-next',
+			prevEl: '.tips__button-prev',
+		},
+	});
+} else {
+	let tips = new Swiper('.tips__slider', {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		autoHeight: true,
+		loop: true,
+		pagination: {
+			el: '.tips__pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.tips__button-next',
+			prevEl: '.tips__button-prev',
+		},
+	});
+}
 document.querySelector(".main__banner-arrow").addEventListener("click", () => {
 	document.querySelector(".main__banner").classList.toggle("activate");
 	document.querySelector(".main__banner-wrapper").classList.toggle("activate");

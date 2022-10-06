@@ -1,0 +1,84 @@
+.tips {
+	&__container {
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 120%;
+		text-align: center;
+		color: #3a3a3a;
+		padding: 44px 0 32px 0;
+	}
+
+	&__slider {
+	}
+
+	&__wrapper {
+		height: 100%;
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		img {
+			width: 100%;
+			height: 250px;
+			object-fit: cover;
+		}
+		&:hover {
+			box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.297);
+		}
+	}
+	&__slide-title {
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 120%;
+		color: #3a3a3a;
+		padding: 16px 16px 8px 16px;
+	}
+
+	&__slide-data {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: #898989;
+		padding: 0px 16px 16px 16px;
+	}
+	&__pagination {
+	}
+
+	&__button-prev {
+		background: #fff;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.557);
+		transform: translateY(-80px);
+		&::after {
+			color: #e89f71;
+			font-size: 16px;
+		}
+	}
+
+	&__button-next {
+		background: #fff;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.557);
+		transform: translateY(-80px);
+		&::after {
+			color: #e89f71;
+			font-size: 16px;
+		}
+	}
+	.swiper-pagination-bullets.swiper-pagination-horizontal {
+		position: static;
+		margin: 43px 0;
+	}
+	.swiper-pagination-bullet {
+		background: #e89f71;
+	}
+}
