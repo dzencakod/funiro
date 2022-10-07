@@ -57,7 +57,13 @@ input {
 @import "_products";
 @import "_room";
 @import "_tips";
+@import "_footer";
 
+.wrapper__hr {
+	width: 100%;
+	margin: 30px 0;
+	border: 1px solid #d8d8d8;
+}
 .feature {
 	padding: 80px 0;
 	&__wrapper {

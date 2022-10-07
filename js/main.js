@@ -97,6 +97,12 @@ if (innerWidth >= 600 && innerWidth <= 1000) {
 		},
 	});
 }
+
+
+
+
+
+
 document.querySelector(".main__banner-arrow").addEventListener("click", () => {
 	document.querySelector(".main__banner").classList.toggle("activate");
 	document.querySelector(".main__banner-wrapper").classList.toggle("activate");
